@@ -24,4 +24,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Module-Implementation
   repository: git://git.urth.org/Module-Implementation.git
-version: 0.03
+version: 0.04
