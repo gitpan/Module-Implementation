@@ -1,6 +1,6 @@
 package Module::Implementation;
 {
-  $Module::Implementation::VERSION = '0.04';
+  $Module::Implementation::VERSION = '0.05';
 }
 
 use strict;
@@ -140,7 +140,7 @@ Module::Implementation - Loads one of several alternate underlying implementatio
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

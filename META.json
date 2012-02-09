@@ -32,7 +32,7 @@
          "requires" : {
             "Test::Fatal" : 0,
             "Test::More" : "0.88",
-            "Test::Taint" : 0
+            "Test::Requires" : 0
          }
       }
    },
@@ -48,6 +48,6 @@
          "web" : "http://git.urth.org/Module-Implementation.git"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
 
