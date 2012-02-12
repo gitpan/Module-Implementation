@@ -25,12 +25,12 @@ my %WriteMakefileArgs = (
   "NAME" => "Module::Implementation",
   "PREREQ_PM" => {
     "Carp" => 0,
-    "Module::Runtime" => "0.011",
+    "Module::Runtime" => "0.012",
     "Try::Tiny" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }

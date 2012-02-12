@@ -1,3 +1,8 @@
+0.06     2012-02-12
+
+- Require Module::Runtime 0.012 which has a number of useful bug fixes.
+
+
 0.05     2012-02-09
 
 - Make Test::Taint an optional dependency. This module requires XS, and

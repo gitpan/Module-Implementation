@@ -22,7 +22,7 @@
       "runtime" : {
          "requires" : {
             "Carp" : 0,
-            "Module::Runtime" : "0.011",
+            "Module::Runtime" : "0.012",
             "Try::Tiny" : 0,
             "strict" : 0,
             "warnings" : 0
@@ -48,6 +48,6 @@
          "web" : "http://git.urth.org/Module-Implementation.git"
       }
    },
-   "version" : "0.05"
+   "version" : "0.06"
 }
 

@@ -1,12 +1,12 @@
 package Module::Implementation;
 {
-  $Module::Implementation::VERSION = '0.05';
+  $Module::Implementation::VERSION = '0.06';
 }
 
 use strict;
 use warnings;
 
-use Module::Runtime 0.011 qw( require_module );
+use Module::Runtime 0.012 qw( require_module );
 use Try::Tiny;
 
 my %Implementation;
@@ -140,7 +140,7 @@ Module::Implementation - Loads one of several alternate underlying implementatio
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
