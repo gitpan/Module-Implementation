@@ -19,7 +19,6 @@ do { my $x = {
                       'requires' => {
                                       'Carp' => '0',
                                       'Module::Runtime' => '0.012',
-                                      'Sub::Name' => '0',
                                       'Try::Tiny' => '0',
                                       'strict' => '0',
                                       'warnings' => '0'

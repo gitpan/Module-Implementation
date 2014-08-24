@@ -1,12 +1,11 @@
 package Module::Implementation;
-# git description: v0.07-5-g3961bf1
-$Module::Implementation::VERSION = '0.08';
+# git description: v0.08-2-gd599347
+$Module::Implementation::VERSION = '0.09';
 
 use strict;
 use warnings;
 
 use Module::Runtime 0.012 qw( require_module );
-use Sub::Name qw( subname );
 use Try::Tiny;
 
 # This is needed for the benefit of Test::CleanNamespaces, which in turn loads
@@ -131,7 +130,7 @@ sub _copy_symbols {
 
             # Copied from Exporter
             *{$to}
-                = $type eq '&' ? subname( $to, \&{$from} )
+                = $type eq '&' ? \&{$from}
                 : $type eq '$' ? \${$from}
                 : $type eq '@' ? \@{$from}
                 : $type eq '%' ? \%{$from}
@@ -158,7 +157,7 @@ Module::Implementation - Loads one of several alternate underlying implementatio
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

@@ -34,7 +34,6 @@
          "requires" : {
             "Carp" : "0",
             "Module::Runtime" : "0.012",
-            "Sub::Name" : "0",
             "Try::Tiny" : "0",
             "strict" : "0",
             "warnings" : "0"
@@ -60,7 +59,7 @@
    "provides" : {
       "Module::Implementation" : {
          "file" : "lib/Module/Implementation.pm",
-         "version" : "0.08"
+         "version" : "0.09"
       }
    },
    "release_status" : "stable",
@@ -76,7 +75,7 @@
          "web" : "https://github.com/autarch/Module-Implementation"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016003"
@@ -532,7 +531,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.08",
+                  "tag" : "v0.09",
                   "tag_format" : "v%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

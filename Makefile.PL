@@ -22,7 +22,6 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Carp" => 0,
     "Module::Runtime" => "0.012",
-    "Sub::Name" => 0,
     "Try::Tiny" => 0,
     "strict" => 0,
     "warnings" => 0
@@ -37,7 +36,7 @@ my %WriteMakefileArgs = (
     "Test::Requires" => 0,
     "lib" => 0
   },
-  "VERSION" => "0.08",
+  "VERSION" => "0.09",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -51,7 +50,6 @@ my %FallbackPrereqs = (
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
   "Module::Runtime" => "0.012",
-  "Sub::Name" => 0,
   "Test::Fatal" => "0.006",
   "Test::More" => "0.88",
   "Test::Requires" => 0,
