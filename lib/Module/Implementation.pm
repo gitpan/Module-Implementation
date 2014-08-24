@@ -1,16 +1,22 @@
 package Module::Implementation;
-{
-  $Module::Implementation::VERSION = '0.07';
-}
-BEGIN {
-  $Module::Implementation::AUTHORITY = 'cpan:DROLSKY';
-}
+# git description: v0.07-5-g3961bf1
+$Module::Implementation::VERSION = '0.08';
 
 use strict;
 use warnings;
 
 use Module::Runtime 0.012 qw( require_module );
+use Sub::Name qw( subname );
 use Try::Tiny;
+
+# This is needed for the benefit of Test::CleanNamespaces, which in turn loads
+# Package::Stash, which in turn loads this module and expects a minimum
+# version.
+unless ( exists $Module::Implementation::{VERSION}
+    && ${ $Module::Implementation::{VERSION} } ) {
+
+    $Module::Implementation::{VERSION} = \42;
+}
 
 my %Implementation;
 
@@ -125,7 +131,7 @@ sub _copy_symbols {
 
             # Copied from Exporter
             *{$to}
-                = $type eq '&' ? \&{$from}
+                = $type eq '&' ? subname( $to, \&{$from} )
                 : $type eq '$' ? \${$from}
                 : $type eq '@' ? \@{$from}
                 : $type eq '%' ? \%{$from}
@@ -144,13 +150,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Module::Implementation - Loads one of several alternate underlying implementations for a module
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -274,7 +282,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013 by Dave Rolsky.
+This software is Copyright (c) 2014 by Dave Rolsky.
 
 This is free software, licensed under:
 
